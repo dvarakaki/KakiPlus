@@ -1,43 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Assets/css/sobre.css">
-    <link rel="shortcut icon" href="/Assets/img/saibamais-removebg-preview (1).png" type="image/x-icon">
-    <title>Kaki+ | Sobre Mim </title>
+    <title>Apresentação Pessoal - Arakaki</title>
+    <link rel="stylesheet" href="/assets/css/sobre.css">
 </head>
-
 <body>
-    <main id="pagina-sobre">
-        <h1 id="titulo-sobre">SOBRE MIM</h1>
+    <header>
+        <img src="/assets/imgs/daviesofia.jpg" alt="daviesofi">
+        <h1>Davi Arakaki</h1>
+        <nav>
+            <ul>
+                <li><a href="#proj">Projetos</a></li>
+                <li><a href="#curios">Curiosidades</a></li>
+                <li><a href="#obj">Objetivos</a></li>
+                <li><a href="#viag">Viagens</a></li>
+                <li><a href="#conhec">Quero conhecer</a></li>
+                <li><a href="https://github.com/dvarakaki">Github</a></li>
+                <li><a href="/Pages/homepagecorintiano.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div id="container-sobre">
-            <div id="sobre-esquerda">
-                <section id="sobre-texto">
-                    <h2>Sobre</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, alias necessitatibus! Unde nostrum
-                        voluptate molestiae sit minus asperiores earum quia illum amet eius, illo blanditiis sint nemo
-                        inventore, ipsam totam?
-                        <br>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, assumenda repudiandae.
-                        Error repellat odio consequatur modi corrupti nobis? Laudantium reprehenderit nihil itaque,
-                        velit suscipit deleniti nesciunt in aliquam quia culpa
-                    </p>
-                </section>
-            </div>
+    <main>
+        <section id="proj">
+            <h2>Projetos</h2>
+            <img src="/assets/imgs/Captura de tela 2025-08-13 074318.png" alt="Imagem do projeto Germinare">
+            <img src="/assets/imgs/germinaHome.png" alt="Home germinaflix">
+            <ol type="A">
+                <li>ArakakiFlix</li>
+                <li>Calculadora</li>
+                <li>Jogo da Turma da Mônica</li>
+            </ol>
+        </section>
 
-            <!-- Lado direito: trailer -->
-            <div id="sobre-direita">
-                <img src="/Assets/imgs/arakakinho.jpg" alt="Foto Luigi Biondo">
-            </div>
-        </div>
+        <section id="curios">
+            <h2>Curiosidades</h2>
+            <img src="/assets/imgs/arakakidelado.jpg" alt="Foto de Arakaki tirada no espelho">
+            <ol type="A">
+                <li>Eu codo desde os 11</li>
+                <li>Gosto de resolver enigmas</li>
+                <li>Estudo Japonês</li>
+            </ol>
+        </section>
 
-        <a href="/Pages/homepagecorintiano.html" style="display: inline-block; margin-top: 30px; color: #661077;">VOLTAR
-            À PÁGINA
-            INICIAL</a>
+        <section id="obj">
+            <h2>Objetivos</h2>
+            <img src="/Assets/imgs/duo.jpg" alt="duolingstreak">
+            <ol type="A">
+                <li>Me tornar um bom programador</li>
+                <li>Viajar pelo mundo</li>
+                <li>Aprender novas línguas</li>
+            </ol>
+        </section>
+
+        <section id="viag">
+            <h2>Viagens</h2>
+            <img src="/assets/imgs/disney.jpg" alt="nois na valdisney">
+            <ol type="A">
+                <li>Xique-Xique</li>
+                <li>Estados Unidos</li>
+                <li>Rio de Janeiro</li>
+            </ol>
+        </section>
+
+        <section id="conhec">
+            <img src="/assets/imgs/7maravilha.jpg" alt="7maravilha">
+            <h2>Quero conhecer</h2>
+            <ul>
+                <li>Japão</li>
+                <li>7 Maravilhas do Mundo</li>
+                <li>França</li>
+            </ul>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Arakaki — Todos os direitos reservados</p>
+    </footer>
+
 </body>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    });
+</script>
 
 </html>

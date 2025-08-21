@@ -1,126 +1,101 @@
-/* Reset + Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background: #262626;
+        }
 
-html {
-    font-size: 16px;
-    scroll-behavior: smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-body {
-    background-color: #141414;
-    font-family: "Helvetica Neue", "Netflix Sans", Arial, sans-serif;
-    color: #FFFFFF;
-    line-height: 1.6;
-}
+        header {
+            text-align: center;
+            padding: 2.5em;
+            background-color: rgb(24, 22, 22);
+            color: #661077;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
 
-/* Página Sobre */
-#pagina-sobre {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
+        header img {
+            width: 250px;
+            height: 250px;
+            border-radius: 30%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid #661077;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
 
-/* Título */
-#titulo-sobre {
-    font-size: 2.5rem;
-    color: #661077;
-    margin-bottom: 50px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
 
-/* Container principal */
-#container-sobre {
-    display: flex;
-    gap: 80px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
 
-/* Lado esquerdo (texto) */
-#sobre-esquerda {
-    flex: 1;
-    min-width: 280px;
-    max-width: 500px;
-    text-align: left;
-}
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
 
-#sobre-texto h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #ffffff;
-}
+        nav a:hover {
+            color: #661077;
+        }
 
-#sobre-texto p {
-    color: #B3B3B3;
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
 
-/* Lado direito (imagem) */
-#sobre-direita {
-    flex: 1;
-    min-width: 300px;
-    max-width: 560px;
-    display: flex;
-    justify-content: center;
-}
+        section {
+            margin-bottom: 2.5rem;
+            background: #555555;
+            padding: 1.5rem;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
 
-#sobre-direita img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    box-shadow: 0 8px 25px #661077;
-    border-radius: 50%;
-    border: 4px solid rgba(255, 255, 255, 0.1);
-    animation: flutuar 6s ease-in-out infinite;
-    transition: transform 0.3s ease;
-}
+        section h2 {
+            margin-top: 0;
+            color: #6d0786;
+        }
 
-#sobre-direita img:hover {
-    transform: scale(1.05);
-}
+        section img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 1rem auto;
+            display: block;
+        }
 
-/* Links */
-a {
-    color: #661077;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+        #obj img {
+            border-radius: 5%;
+        }
 
-a:hover {
-    color: #661077;
-}
 
-/* Animação */
-@keyframes flutuar {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    #container-sobre {
-        gap: 40px;
-    }
-
-    #titulo-sobre {
-        font-size: 2rem;
-    }
-
-    #sobre-direita img {
-        width: 280px;
-        height: 280px;
-    }
-}
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-weight: bold;
+            background: #6d0786;
+            color: #fff;
+            margin-top: 2rem;
+        }
