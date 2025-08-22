@@ -1,27 +1,36 @@
+/* ---------------- Reset básico ---------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ---------------- Body ---------------- */
 body {
   background-color: #121212;
   font-family: "Helvetica Neue", "Netflix Sans", sans-serif;
   color: #661077;
+  text-align: center;
 }
 
+/* ---------------- Links ---------------- */
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #661077;
+}
+
+/* ---------------- Header ---------------- */
 header {
   background-color: rgb(24, 22, 22);
   padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
-h1 a {
-  font-size: 40px;
-  text-decoration: none;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
@@ -29,11 +38,32 @@ header h1 {
   font-size: 2.5rem;
 }
 
+/* ---------------- Títulos gerais ---------------- */
 h1 {
   font-size: 2rem;
   color: #661077;
   margin-left: 20px;
   animation: fadeInZoom 1s ease-in-out;
+  cursor: pointer;
+}
+
+h1 a {
+  font-size: 40px;
+  text-decoration: none;
+}
+
+/* ---------------- Glow roxo para títulos ---------------- */
+.kaki {
+  color: #661077;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+}
+
+h1 a:hover .kaki {
+  color: #fff;
+  text-shadow: 0 0 15px rgba(138, 43, 226, 0.9),
+               0 0 25px rgba(138, 43, 226, 0.7),
+               0 0 35px rgba(138, 43, 226, 0.5);
 }
 
 nav ul {
@@ -47,15 +77,23 @@ nav ul {
 }
 
 nav ul li a {
-  color: #661077;
-  text-decoration: none;
+  color: #fff;
   font-weight: bold;
   padding: 8px 12px;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #fff;
+  color: #661077;
+}
+
+p {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+p:hover {
+  text-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
 }
 
 ul {
@@ -72,6 +110,7 @@ ul li {
   cursor: pointer;
   transition: color 0.3s ease;
 }
+
 
 table {
   width: 100%;
@@ -95,11 +134,12 @@ td:hover {
   transform: scale(1.05);
 }
 
+
 .card-content p {
   margin: 5px 0;
 }
 
-.titulo-serie {
+.titulo-filme {
   font-weight: bold;
   font-size: 1.1rem;
   animation: fadeInZoom 1s ease-in-out;
@@ -107,27 +147,25 @@ td:hover {
 
 a {
   color: #661077;
-  text-decoration: none;
   font-size: 1.2rem;
 }
 
-a:hover {
-  color: #fff;
-}
-
 img {
-  width: 160px;
-  height: 240px;
+  width: 250px;
+  height: 370px;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 35px rgba(138, 43, 226, 0.9),
+              0 0 70px rgba(138, 43, 226, 0.6);
+  border: 2px solid #8a2be2;
 }
+
 
 footer {
   background-color: #121212;
@@ -138,15 +176,12 @@ footer {
 }
 
 ul.box-redes-sociais {
-
   padding-left: 90px;
   padding-top: 30px;
   display: flex;
   background: transparent;
   width: 305px;
-  float: none;
   margin: auto;
-
 }
 
 ul.box-redes-sociais li {
@@ -154,9 +189,7 @@ ul.box-redes-sociais li {
   margin: auto;
 }
 
-
 ul.box-redes-sociais li a {
-
   width: 50px;
   height: 50px;
   background-color: #fff;
@@ -175,13 +208,13 @@ ul.box-redes-sociais li a {
 ul.box-redes-sociais li a .icon {
   position: relative;
   color: #262626;
-  transition: .3s;
+  transition: 0.3s;
   z-index: 3;
 }
 
 ul.box-redes-sociais li a:hover .icon {
   color: #fff;
-  scale: 1.2;
+  scale:1.2;
 }
 
 ul.box-redes-sociais li a:before {
@@ -200,12 +233,12 @@ ul.box-redes-sociais li a:hover:before {
   top: 0;
 }
 
-ul.box-redes-sociais li.instagram a:before {
-  background: hsl(0 0% 10%);
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+ul.box-redes-sociais li.instagram a:before{
+  background:hsl(0 0% 10%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 
-ul.box-redes-sociais li.twitter a:before {
+ul.box-redes-sociais li.twitter a:before{
   background: #bd55ee;
 }
 
@@ -214,32 +247,21 @@ ul.box-redes-sociais li.youtube a:before {
 }
 
 
-@keyframes fadeInZoom {
-
-  /* Animação feita pelo gpt de fadeIn e zoom no nome quando entra */
+@keyframes fadeInZoom { 
   from {
     opacity: 0;
     transform: scale(0.8);
   }
-
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
-.kaki {
-  color: #661077; /* roxo */
-  transition: color 0.3s ease;
-}
 
 .mais {
-  color: #fff; /* azul */
+  color: #fff;
   transition: color 0.3s ease;
   font-size: 4rem;
-}
-
-h1 a:hover .kaki {
-  color: #fff;
 }
 
 h1 a:hover .mais {

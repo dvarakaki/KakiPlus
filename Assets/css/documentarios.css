@@ -8,7 +8,9 @@ body {
   background-color: #121212;
   font-family: "Helvetica Neue", "Netflix Sans", sans-serif;
   color: #661077;
+  text-align: center;
 }
+
 
 header {
   background-color: rgb(24, 22, 22);
@@ -36,6 +38,26 @@ h1 a {
   text-decoration: none;
 }
 
+.kaki {
+  color: #661077;
+  transition: color 0.3s ease;
+}
+
+.mais {
+  color: #fff;
+  font-size: 4rem;
+  transition: color 0.3s ease;
+}
+
+h1 a:hover .kaki {
+  color: #fff;
+}
+
+h1 a:hover .mais {
+  color: #661077;
+}
+
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -47,16 +69,17 @@ nav ul {
 }
 
 nav ul li a {
-  color: #661077;
-  text-decoration: none;
+  color: #fff;
   font-weight: bold;
   padding: 8px 12px;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
-  color: #fff;
+  color: #661077;
 }
+
 
 ul {
   display: flex;
@@ -73,6 +96,7 @@ ul li {
   transition: color 0.3s ease;
 }
 
+
 table {
   width: 100%;
   margin: 30px auto;
@@ -88,12 +112,13 @@ th {
 
 td {
   text-align: center;
-  transition: transform 2.2s ease;
+  transition: transform 0.3s ease;
 }
 
 td:hover {
   transform: scale(1.05);
 }
+
 
 .card-content p {
   margin: 5px 0;
@@ -106,9 +131,9 @@ td:hover {
 }
 
 a {
-  color: #661077;
-  text-decoration: none;
+  color: #fff;
   font-size: 1.2rem;
+  text-decoration: none;
 }
 
 a:hover {
@@ -116,18 +141,21 @@ a:hover {
 }
 
 img {
-  width: 160px;
-  height: 240px;
+  width: 250px;
+  height: 370px;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 35px rgba(138, 43, 226, 0.9),
+              0 0 70px rgba(138, 43, 226, 0.6);
+  border: 2px solid #8a2be2;
 }
+
 
 footer {
   background-color: #121212;
@@ -138,15 +166,12 @@ footer {
 }
 
 ul.box-redes-sociais {
-
   padding-left: 90px;
   padding-top: 30px;
   display: flex;
-  background: transparent;
   width: 305px;
-  float: none;
   margin: auto;
-
+  background: transparent;
 }
 
 ul.box-redes-sociais li {
@@ -154,9 +179,7 @@ ul.box-redes-sociais li {
   margin: auto;
 }
 
-
 ul.box-redes-sociais li a {
-
   width: 50px;
   height: 50px;
   background-color: #fff;
@@ -175,7 +198,7 @@ ul.box-redes-sociais li a {
 ul.box-redes-sociais li a .icon {
   position: relative;
   color: #262626;
-  transition: .3s;
+  transition: 0.3s;
   z-index: 3;
 }
 
@@ -201,7 +224,6 @@ ul.box-redes-sociais li a:hover:before {
 }
 
 ul.box-redes-sociais li.instagram a:before {
-  background: hsl(0 0% 10%);
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
@@ -213,10 +235,7 @@ ul.box-redes-sociais li.youtube a:before {
   background: #ff1d15;
 }
 
-
 @keyframes fadeInZoom {
-
-  /* Animação feita pelo gpt de fadeIn e zoom no nome quando entra */
   from {
     opacity: 0;
     transform: scale(0.8);
@@ -226,21 +245,55 @@ ul.box-redes-sociais li.youtube a:before {
     opacity: 1;
     transform: scale(1);
   }
-}.kaki {
-  color: #661077; /* roxo */
-  transition: color 0.3s ease;
 }
 
-.mais {
-  color: #fff; /* azul */
-  transition: color 0.3s ease;
-  font-size: 4rem;
+
+.container {
+  margin-top: 150px;
 }
 
-h1 a:hover .kaki {
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+.profile {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile img {
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.profile:hover {
+  transform: scale(1.1);
+}
+
+.profile:hover img {
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.9),
+    0 0 50px rgba(138, 43, 226, 0.6);
+  border: 2px solid #8a2be2;
+}
+
+.profile p {
   color: #fff;
 }
 
-h1 a:hover .mais {
-  color: #661077; 
+@media (max-width: 1024px) {
+  .profiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .profiles {
+    grid-template-columns: 1fr;
+  }
 }
