@@ -1,11 +1,9 @@
-/* ---------------- Reset básico ---------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ---------------- Body ---------------- */
 body {
   background-color: #121212;
   font-family: "Helvetica Neue", "Netflix Sans", sans-serif;
@@ -13,7 +11,6 @@ body {
   text-align: center;
 }
 
-/* ---------------- Links ---------------- */
 a {
   text-decoration: none;
   transition: color 0.3s ease;
@@ -23,7 +20,6 @@ a:hover {
   color: #661077;
 }
 
-/* ---------------- Header ---------------- */
 header {
   background-color: rgb(24, 22, 22);
   padding: 20px 40px;
@@ -38,7 +34,6 @@ header h1 {
   font-size: 2.5rem;
 }
 
-/* ---------------- Títulos gerais ---------------- */
 h1 {
   font-size: 2rem;
   color: #661077;
@@ -52,7 +47,6 @@ h1 a {
   text-decoration: none;
 }
 
-/* ---------------- Glow roxo para títulos ---------------- */
 .kaki {
   color: #661077;
   transition: all 0.3s ease;

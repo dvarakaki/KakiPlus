@@ -1,227 +1,292 @@
-*{                            /*Esse reseta todas as configurações da página, sempre curto começar por esse.*/
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #121212;
-    font-family: "Helvetica Neue", "Netflix Sans", sans-serif;
-    color: #fff;
-  }
-  
-  header {
-    background-color: #e55a09;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;/* Joga o H1 pra um lado e o nav para o outro, deixando um espaçamento no meio*/
-    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
-  }
-  
-  header h1 {  /*Dessa forma conseguimos estilizar só o h1 que está dentro do header, os outros não*/
-    color: #ffffff;
-    font-size: 2.5rem;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    color: #e55a09;
-    margin-left: 20px;
-    animation: fadeInZoom 1s ease-in-out;
-  }
-  h1 a{ /* Estilizando o link do h1 */
-    font-size: 40px;
-    text-decoration: none;
-  }
-  
-  nav ul { /*Mesma coisa aqui, style só no ul dentro da nav */
-    list-style: none;
-    padding: 0;
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #261f1a;
-  }
-  p{
-    color: white;
-  }
-  ul {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-  }
-  
-  ul li {
-    font-size: 1rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  table {
-    width: 100%;
-    margin: 30px auto;
-    border-spacing: 20px;
-  }
-  
-  th {
-    text-align: left;
-    font-size: 1.5rem;
-    padding-bottom: 10px;
-    animation: fadeInZoom 1s ease-in-out;
-  }
-  
-  td {
-    text-align: center;
-    transition: transform 2.2s ease;
-  }
-  
-  td:hover {
-    transform: scale(1.05);
-  }
-  
-  .card-content p {
-    margin: 5px 0;
-  }
-  
-  .titulo-filme {
-    font-weight: bold;
-    font-size: 1.1rem;
-    animation: fadeInZoom 1s ease-in-out;
-  }
-  
-  a {
-    color: #ffff;;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  
-  a:hover {
-    text-decoration: none;
-  
-  }
-  img {
-    width: 200px;
-    height: 270px;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.8);
-  }
-  
-  ul.box-redes-sociais {
-    
-    padding-left: 90px;
-    padding-top: 30px;
-    display: flex;
-    background: transparent;
-    width: 305px;
-    float: none;
-    margin: auto;
-  
-  }
-  
-  ul.box-redes-sociais li {
-    list-style: none;
-    margin: auto;
-  }
-  
-  
-  ul.box-redes-sociais li a {
-    
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    text-align: center;
-    line-height: 45px;
-    font-size: 22px;
-    margin: 0 5px;
-    display: block;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid #eaeaea;
-    z-index: 1;
-  }
-  ul.box-redes-sociais li a .icon {
-    position: relative;
-    color: #262626;
-    transition: .3s;
-    z-index: 3;
-  }
-  
-  ul.box-redes-sociais li a:hover .icon {
-    color: #fff;
-    scale:1.2; 
-  }
-  
-  ul.box-redes-sociais li a:before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #f00;
-    transition: 0.4s;
-    z-index: 2;
-  }
-  
-  ul.box-redes-sociais li a:hover:before {
-    top: 0;
-  }
-  
-  ul.box-redes-sociais li.instagram a:before{
-    background:hsl(0 0% 10%);
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-  }
-  
-  ul.box-redes-sociais li.twitter a:before{
-    background: #bd55ee;
-  }
-  
-  ul.box-redes-sociais li.youtube a:before {
-    background: #ff1d15;
-  }
-  
-  
-  @keyframes fadeInZoom { /* Animação feita pelo gpt de fadeIn e zoom no nome quando entra */
-    from {
-      opacity: 0;
-      transform: scale(0.8);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     }
-    to {
-      opacity: 1;
-      transform: scale(1);
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
     }
-  }
-  
-  footer {
-    background-color: #121212;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    width: 100%;  
-  }
-  
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header estilo Shopee */
+    header {
+      background-color: #ee4d2d;
+      padding: 12px 0;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+    }
+
+    header h1 a {
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-size: 0.9rem;
+      padding: 5px 10px;
+      border-radius: 2px;
+      transition: background-color 0.2s;
+    }
+
+    nav ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Conteúdo principal */
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    .category-title {
+      background-color: white;
+      padding: 15px;
+      margin: 20px 0 15px 0;
+      border-radius: 3px;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+      color: #ee4d2d;
+      font-size: 1.2rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+
+    .category-title:before {
+      content: "";
+      display: inline-block;
+      width: 3px;
+      height: 18px;
+      background-color: #ee4d2d;
+      margin-right: 10px;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .movie-card {
+      background: white;
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .movie-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .movie-poster {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .movie-info {
+      padding: 10px;
+    }
+
+    .movie-title {
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      height: 40px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .movie-year {
+      color: #757575;
+      font-size: 0.8rem;
+      margin-bottom: 8px;
+    }
+
+    .movie-actions {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn {
+      padding: 5px 10px;
+      border-radius: 2px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn-trailer {
+      background-color: #f5f5f5;
+      color: #555;
+      border: 1px solid #e8e8e8;
+    }
+
+    .btn-trailer:hover {
+      background-color: #e8e8e8;
+    }
+
+    .btn-info {
+      background-color: #ee4d2d;
+      color: white;
+    }
+
+    .btn-info:hover {
+      background-color: #d73211;
+    }
+
+    /* Footer estilo Shopee */
+    footer {
+      background-color: white;
+      padding: 30px 0;
+      margin-top: 40px;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      text-align: center;
+      color: #757575;
+      font-size: 0.9rem;
+    }
+
+    .box-redes-sociais {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+      list-style: none;
+    }
+
+    .box-redes-sociais li a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #f5f5f5;
+      color: #757575;
+      font-size: 16px;
+      transition: all 0.3s;
+    }
+
+    .box-redes-sociais li a:hover {
+      background: #ee4d2d;
+      color: white;
+    }
+
+    /* Popup */
+    #popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #popup-content {
+      background: white;
+      padding: 25px;
+      border-radius: 4px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    #popup-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 3px;
+      margin-bottom: 15px;
+    }
+
+    #popup-content p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    #popup-content button {
+      background-color: #ee4d2d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background-color 0.2s;
+    }
+
+    #popup-content button:hover {
+      background-color: #d73211;
+    }
+
+    /* Responsividade */
+    @media (max-width: 1024px) {
+      .movie-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      nav ul {
+        gap: 10px;
+      }
+      
+      nav ul li a {
+        font-size: 0.8rem;
+        padding: 5px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .header-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }

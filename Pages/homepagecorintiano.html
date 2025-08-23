@@ -29,11 +29,20 @@
         <li><a href="/Pages/User.html">Sair</a></li>
       </ul>
     </nav>
-
   </header>
 
-  <main>
+  <div class="video-modal" id="videoModal">
+    <div class="video-container">
+      <div class="close-btn" id="closeModal">X</div>
+      <div class="video-iframe">
+        <iframe id="player" src="" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 
+  <main>
     <table>
       <tr>
         <th colspan="5">MAIS VISTOS</th>
@@ -43,11 +52,8 @@
           <a href="https://m.media-amazon.com/images/I/81xQScHPvRL.jpg">
             <img src="https://m.media-amazon.com/images/I/81xQScHPvRL.jpg" alt="posterst">
             <p class="titulo-filme">Stranger Things</p>
-            <!-- usamos o class para conseguirmos estilizar todos de uma vez e uniforme -->
             <p>(2016)</p>
-            <p><a
-                href="https://www.youtube.com/watch?v=b9EkMc79ZSU&pp=ygUZdHJhaWxlciBzdHJhbmdlciB0aGluZ3MgMQ%3D%3D">Trailer</a>
-            </p>
+            <p><a class="trailer-link" data-video="b9EkMc79ZSU">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/Stranger_Thingse">Saiba Mais</a></p>
           </a>
         </td>
@@ -59,9 +65,8 @@
               <br>
               E a Pedra Filosofal
             </p>
-            </p>
             <p>(2001)</p>
-            <p><a href="https://www.youtube.com/watch?v=O7JVilOQdZ4">Trailer</a></p>
+            <p><a class="trailer-link" data-video="O7JVilOQdZ4">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/Harry_Potter_e_a_Pedra_Filosofal_(filme)">Saiba Mais</a></p>
           </a>
         </td>
@@ -70,7 +75,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/pt/8/87/Halloween_cover.jpg" alt="posterhaloween">
             <p class="titulo-filme">Halloween</p>
             <p>(1978)</p>
-            <p><a href="https://www.youtube.com/watch?v=T5ke9IPTIJQ">Trailer</a></p>
+            <p><a class="trailer-link" data-video="T5ke9IPTIJQ">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/Halloween_(filme_de_1978)">Saiba Mais</a></p>
           </a>
         </td>
@@ -83,7 +88,7 @@
               Chihiro
             </p>
             <p>(2001)</p>
-            <p><a href="https://www.youtube.com/watch?v=SgZI655GgHk">Trailer</a></p>
+            <p><a class="trailer-link" data-video="SgZI655GgHk">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/A_Viagem_de_Chihiro">Saiba Mais</a></p>
           </a>
         </td>
@@ -92,9 +97,7 @@
             <img src="https://br.web.img3.acsta.net/pictures/21/09/14/18/49/5442347.jpg" alt="posterround6">
             <p class="titulo-filme">Round 6</p>
             <p>(2021)</p>
-            <p><a
-                href="https://www.youtube.com/watch?v=Ncra_hUVtMM&pp=ygUZdHJhaWxlciBkYSBzw6lyaWUgcm91bmQgNg%3D%3D">Trailer</a>
-            </p>
+            <p><a class="trailer-link" data-video="Ncra_hUVtMM">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/Squid_Game">Saiba Mais</a></p>
           </a>
         </td>
@@ -102,7 +105,6 @@
 
       <tr>
         <th colspan="5">RECOMENDADOS</th>
-        <!-- usamos o colspan para determinar uma quantidade de colunas que serão usadas de uma vez -->
       </tr>
       <tr>
         <td>
@@ -114,7 +116,7 @@
             <p class="titulo-filme">Ponyo
             </p>
             <p>(2008)</p>
-            <p><a href="https://www.youtube.com/watch?v=CsR3KVgBzSM">Trailer</a></p>
+            <p><a class="trailer-link" data-video="CsR3KVgBzSM">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/Gake_no_ue_no_Ponyo">Saiba Mais</a></p>
           </a>
         </td>
@@ -126,7 +128,7 @@
               Totoro
             </p>
             <p>(1988)</p>
-            <p><a href="https://www.youtube.com/watch?v=92a7Hj0ijLs">Trailer</a></p>
+            <p><a class="trailer-link" data-video="92a7Hj0ijLs">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/Tonari_no_Totoro">Saiba Mais</a></p>
           </a>
         </td>
@@ -135,7 +137,7 @@
             <img src="https://br.web.img3.acsta.net/pictures/17/04/19/21/08/577190.jpg" alt="corra">
             <p class="titulo-filme">Corra</p>
             <p>(2018)</p>
-            <p><a href="https://www.youtube.com/watch?v=mDGV5UucTu8">Trailer</a></p>
+            <p><a class="trailer-link" data-video="mDGV5UucTu8">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/Get_Out">Saiba Mais</a></p>
           </a>
         </td>
@@ -143,7 +145,7 @@
             <img src="https://br.web.img2.acsta.net/medias/nmedia/18/90/07/53/20391069.jpg" alt="Djangoposter">
             <p class="titulo-filme">Django Livre</p>
             <p>(2012)</p>
-            <p><a href="https://www.youtube.com/watch?v=tivv135aGbc">Trailer</a></p>
+            <p><a class="trailer-link" data-video="tivv135aGbc">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/Django_Unchained">Saiba Mais</a></p>
           </a>
         </td>
@@ -155,7 +157,7 @@
               alt="usposter">
             <p class="titulo-filme">Us</p>
             <p>(2019)</p>
-            <p><a href="https://www.youtube.com/watch?v=hNCmb-4oXJA">Trailer</a></p>
+            <p><a class="trailer-link" data-video="hNCmb-4oXJA">Trailer</a></p>
             <p><a href="https://en.wikipedia.org/wiki/Us_(2019_film)">Saiba Mais</a></p>
           </a>
         </td>
@@ -170,7 +172,7 @@
             <p class="titulo-filme">Interstellar
             </p>
             <p>(2014)</p>
-            <p><a href="https://www.youtube.com/watch?v=zSWdZVtXT7E">Trailer</a></p>
+            <p><a class="trailer-link" data-video="zSWdZVtXT7E">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/Interstellar">Saiba Mais</a></p>
           </a>
         </td>
@@ -179,7 +181,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/pt/8/87/Halloween_cover.jpg" alt="posterhaloween">
             <p class="titulo-filme">Halloween</p>
             <p>(1978)</p>
-            <p><a href="https://www.youtube.com/watch?v=T5ke9IPTIJQ">Trailer</a></p>
+            <p><a class="trailer-link" data-video="T5ke9IPTIJQ">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/Halloween_(filme_de_1978)">Saiba Mais</a></p>
           </a>
         </td>
@@ -193,10 +195,8 @@
               <br>
               No Way Home
             </p>
-            </p>
             <p>(2021)</p>
-            <p><a href="https://www.youtube.com/watch?v=JfVOs4VSpmA&pp=ygUTbm8gd2F5IGhvbWUgdHJhaWxlcg%3D%3D">Trailer</a>
-            </p>
+            <p><a class="trailer-link" data-video="JfVOs4VSpmA">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/Spider-Man:_No_Way_Home">Saiba Mais</a></p>
           </a>
         </td>
@@ -205,7 +205,7 @@
             <img src="https://images.justwatch.com/poster/270188247/s718/a-rede-social.jpg" alt="redesocialposter">
             <p class="titulo-filme">A Rede Social</p>
             <p>(2010)</p>
-            <p><a href="https://www.youtube.com/watch?v=eLQ_qqz1unY&pp=ygUVYSByZWRlIHNvY2lhbCB0cmFpbGVy">Trailer</a></p>
+            <p><a class="trailer-link" data-video="eLQ_qqz1unY">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/A_Rede_Social">Saiba Mais</a></p>
           </a>
         </td>
@@ -219,16 +219,15 @@
               <br>
               Wall Street
             </p>
-            </p>
             <p>(2013)</p>
-            <p><a href="https://www.youtube.com/watch?v=PoSCUsNQVtw&pp=ygUVbyBsb2JvIGRlIHdhbGwgc3RyZWV0">Trailer</a></p>
+            <p><a class="trailer-link" data-video="PoSCUsNQVtw">Trailer</a></p>
             <p><a href="https://pt.wikipedia.org/wiki/O_Lobo_de_Wall_Street">Saiba Mais</a></p>
           </a>
         </td>
       </tr>
     </table>
-
   </main>
+
   <footer>
     <p>&copy; 2025 Kaki+ | Todos os direitos reservados</p>
     <ul class="box-redes-sociais">
@@ -236,15 +235,63 @@
         <a href="https://x.com/arakakinhoo"><i class="fab fa-twitter icon"></i></a>
       </li>
       <li class="instagram">
-        <a target="_blank" href=https://www.instagram.com/arakuiks/""><i class="fab fa-instagram icon"></i></a>
+        <a target="_blank" href="https://www.instagram.com/arakuiks/"><i class="fab fa-instagram icon"></i></a>
       </li>
       <li class="youtube">
         <a href="https://www.youtube.com/watch?v=FGvhHbu1C9k&pp=ygUbNngxIHNhbyBwYXVsbyBlIGNvcmludGhpYW5z"><i
             class="fab fa-youtube icon"></i></a>
       </li>
-              
     </ul>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('videoModal');
+      const player = document.getElementById('player');
+      const closeModal = document.getElementById('closeModal');
+      const trailerLinks = document.querySelectorAll('.trailer-link');
+
+      // Função para abrir o modal com o vídeo
+      function openVideoModal(videoId) {
+        player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Impede scroll na página principal
+      }
+
+      // Função para fechar o modal
+      function closeVideoModal() {
+        modal.classList.remove('active');
+        player.src = ''; // Para o vídeo
+        document.body.style.overflow = ''; // Restaura scroll
+      }
+
+      // Adiciona eventos de clique aos links de trailer
+      trailerLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const videoId = this.getAttribute('data-video');
+          openVideoModal(videoId);
+        });
+      });
+
+      // Fecha o modal ao clicar no botão de fechar
+      closeModal.addEventListener('click', closeVideoModal);
+
+      // Fecha o modal ao clicar fora do player
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          closeVideoModal();
+        }
+      });
+
+      // Fecha o modal com a tecla ESC
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+          closeVideoModal();
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

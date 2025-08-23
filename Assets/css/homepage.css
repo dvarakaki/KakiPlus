@@ -1,11 +1,9 @@
-/* ---------------- Reset básico ---------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ---------------- Body ---------------- */
 body {
   background-color: #121212;
   font-family: "Helvetica Neue", "Netflix Sans", sans-serif;
@@ -13,7 +11,6 @@ body {
   text-align: center;
 }
 
-/* ---------------- Links ---------------- */
 a {
   text-decoration: none;
   transition: color 0.3s ease;
@@ -23,7 +20,6 @@ a:hover {
   color: #661077;
 }
 
-/* ---------------- Header ---------------- */
 header {
   background-color: rgb(24, 22, 22);
   padding: 20px 40px;
@@ -38,7 +34,6 @@ header h1 {
   font-size: 2.5rem;
 }
 
-/* ---------------- Títulos gerais ---------------- */
 h1 {
   font-size: 2rem;
   color: #661077;
@@ -52,7 +47,6 @@ h1 a {
   text-decoration: none;
 }
 
-/* ---------------- Glow roxo para títulos ---------------- */
 .kaki {
   color: #661077;
   transition: all 0.3s ease;
@@ -62,8 +56,8 @@ h1 a {
 h1 a:hover .kaki {
   color: #fff;
   text-shadow: 0 0 15px rgba(138, 43, 226, 0.9),
-               0 0 25px rgba(138, 43, 226, 0.7),
-               0 0 35px rgba(138, 43, 226, 0.5);
+    0 0 25px rgba(138, 43, 226, 0.7),
+    0 0 35px rgba(138, 43, 226, 0.5);
 }
 
 nav ul {
@@ -155,14 +149,14 @@ img {
   height: 370px;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 35px rgba(138, 43, 226, 0.9),
-              0 0 70px rgba(138, 43, 226, 0.6);
+    0 0 70px rgba(138, 43, 226, 0.6);
   border: 2px solid #8a2be2;
 }
 
@@ -214,7 +208,7 @@ ul.box-redes-sociais li a .icon {
 
 ul.box-redes-sociais li a:hover .icon {
   color: #fff;
-  scale:1.2;
+  scale: 1.2;
 }
 
 ul.box-redes-sociais li a:before {
@@ -233,12 +227,12 @@ ul.box-redes-sociais li a:hover:before {
   top: 0;
 }
 
-ul.box-redes-sociais li.instagram a:before{
-  background:hsl(0 0% 10%);
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+ul.box-redes-sociais li.instagram a:before {
+  background: hsl(0 0% 10%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
-ul.box-redes-sociais li.twitter a:before{
+ul.box-redes-sociais li.twitter a:before {
   background: #bd55ee;
 }
 
@@ -247,11 +241,12 @@ ul.box-redes-sociais li.youtube a:before {
 }
 
 
-@keyframes fadeInZoom { 
+@keyframes fadeInZoom {
   from {
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -265,5 +260,74 @@ ul.box-redes-sociais li.youtube a:before {
 }
 
 h1 a:hover .mais {
-  color: #661077; 
+  color: #661077;
 }
+    /* Estilos para o modal do player */
+    .video-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .video-modal.active {
+      display: flex;
+    }
+    
+    .video-container {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+    }
+    
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      background: rgba(102, 16, 119, 0.7);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1001;
+      font-weight: bold;
+    }
+    
+    .close-btn:hover {
+      background: rgba(102, 16, 119, 1);
+    }
+    
+    .video-iframe {
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* Proporção 16:9 */
+      position: relative;
+    }
+    
+    .video-iframe iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    /* Ajuste para os links de trailer */
+    .trailer-link {
+      cursor: pointer;
+    }
