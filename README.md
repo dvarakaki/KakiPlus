@@ -27,4 +27,4 @@ Criar uma plataforma de streaming prática, acessível e divertida, que una tecn
 ## 🚀 Como rodar o projeto localmente
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/SEU-USUARIO/kaki-plus.git
+   https://github.com/dvarakaki/KakiPlus
