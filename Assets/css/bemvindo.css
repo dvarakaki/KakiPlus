@@ -23,12 +23,10 @@ body {
 }
 
 .logo {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 0 20px rgba(102, 16, 119, 0.6);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .logo:hover {
@@ -39,20 +37,21 @@ h1 {
   font-size: 3rem;
   margin-bottom: 15px;
   font-weight: 700;
-  letter-spacing: 2px;
+
   cursor: pointer;
 }
 h1:hover {
   color: #8a2be2;
-  text-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+  text-shadow: 0 0 30px rgba(138, 43, 226, 0.7);
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin-bottom: 25px;
   color: #ddd;
   max-width: 500px;
   cursor: pointer;
+    font-weight: bold;
 }
 p:hover {
   color: #8a2be2;
@@ -69,18 +68,16 @@ button {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: #0d0d0d 0px 4px 10px;
 }
 
 button:hover {
   background: linear-gradient(135deg, #661077, #450c5c);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
 
 footer {
-  margin-top: auto;
   width: 100%;
-  padding: 1rem;
   font-size: 0.85rem;
   color: #aaa;
   text-align: center;

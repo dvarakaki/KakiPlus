@@ -43,7 +43,6 @@ h1:hover {
   transition: all 0.3s ease;
 }
 
-/* Hover roxo brilhante */
 .profile:hover {
   transform: scale(1.1);
 }
